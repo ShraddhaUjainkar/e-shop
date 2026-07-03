@@ -1,0 +1,95 @@
+// ==========================================================================
+// Colors — pulled from reference Tailwind config + design brief
+// Only the colors actually used in the reference markup are kept.
+// Renamed to plain, memorable names instead of Material-style tokens.
+// ==========================================================================
+
+// Core palette
+$color-paper: #edeae3; // page background
+$color-ink: #211f1c; // primary text
+$color-background: #fff8f3; // slightly warmer alt background (nav/footer)
+
+// Accent
+$color-forest: #2f4538; // primary-container — buttons, active states
+$color-forest-dark: #192f23; // primary — deep variant for text-on-light emphasis
+$color-brass: #b59410; // secondary — quick-add, price highlight, badges
+$color-brass-light: #fcca66; // secondary-container — hover fills, soft accents
+$color-rose: #c1665a; // sale / sold-out / remove-item (from your design brief; not in reference file)
+
+// Neutrals / surfaces
+$color-surface: #fff8f3;
+$color-surface-container: #f3ede8;
+$color-surface-container-low: #f9f2ed;
+$color-surface-container-high: #ede7e2;
+$color-card-white: #f7f5f0;
+
+// Borders / lines
+$color-line: #d9d5ca;
+$color-outline: #737973;
+$color-outline-variant: #c2c8c2;
+$color-text-muted: #424844; // on-surface-variant
+
+// Status (kept minimal — only add more if you actually need them)
+$color-error: #ba1a1a;
+$color-error-container: #ffdad6;
+
+// ==========================================================================
+// Typography
+// ==========================================================================
+
+$font-display: 'Fraunces', serif; // headings, product names, price
+$font-body: 'Inter', sans-serif; // body copy, nav, buttons
+$font-mono: 'IBM Plex Mono', monospace; // labels, SKUs, prices, badges
+
+// Type scale (desktop) — trimmed to what a 4-page app actually needs
+$font-size-display-xl: 64px; // hero / page title, if you have one
+$font-size-display-lg: 48px;
+$font-size-headline-md: 32px; // product detail name
+$font-size-headline-sm: 24px; // product card name
+$font-size-price: 28px;
+$font-size-body-lg: 18px;
+$font-size-body-md: 16px; // default body
+$font-size-utility-label: 12px; // mono labels — uppercase, letter-spaced
+
+$line-height-tight: 1.1;
+$line-height-snug: 1.2;
+$line-height-normal: 1.6;
+
+$letter-spacing-utility: 0.1em; // used on mono uppercase labels
+$letter-spacing-tight: -0.01em; // used on large display headings
+
+// ==========================================================================
+// Spacing / layout
+// ==========================================================================
+
+$spacing-unit: 4px;
+$container-max-width: 1280px;
+$gutter: 24px;
+$margin-desktop: 48px;
+$margin-mobile: 16px;
+
+// ==========================================================================
+// Radius
+// ==========================================================================
+
+$radius-default: 0.25rem;
+$radius-lg: 0.5rem;
+$radius-xl: 0.75rem;
+$radius-full: 9999px;
+
+// ==========================================================================
+// Motion — from your design brief, not present in the reference file
+// ==========================================================================
+
+$ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1); // entrances, fly-to-cart
+$duration-micro: 150ms; // hover states, toggles
+$duration-panel: 300ms; // drawer, modal
+$duration-page: 250ms; // route-level transitions
+
+// ==========================================================================
+// Breakpoints (Sass doesn't ship these — define your own, no Tailwind JIT)
+// ==========================================================================
+
+$bp-mobile: 0;
+$bp-tablet: 768px; // matches ">767px" split from the assignment spec
+$bp-desktop: 1024px;
