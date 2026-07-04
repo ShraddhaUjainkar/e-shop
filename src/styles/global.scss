@@ -33,7 +33,7 @@ button {
 }
 
 // Material Icons Setup
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap');
 
 .material-symbols-outlined {
   font-variation-settings:
@@ -44,6 +44,10 @@ button {
   display: inline-block;
   vertical-align: middle;
   line-height: 1;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 // ==========================================================================

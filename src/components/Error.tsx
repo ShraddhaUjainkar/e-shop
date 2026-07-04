@@ -10,9 +10,9 @@ const Error = ({ state }: ErrorProps) => {
         <span className="material-symbols-outlined text-[48px] text-error">
           error
         </span>
-        <h2 className="font-display-xl text-display-xl mb-2 text-error">
+        <h1 className="font-display-xl text-display-xl mb-2 text-error">
           Failed to load products
-        </h2>
+        </h1>
         <p className="font-body-md text-on-surface-variant mb-6">
           {state.message ||
             'An unexpected error occurred while fetching the catalog.'}

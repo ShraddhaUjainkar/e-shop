@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { getProducts } from '../services/api';
 import { useApiResource } from '../hooks/useResource';
 import ProductCard from '../components/ProductCard';
@@ -6,6 +7,18 @@ import Loading from '../components/Loading';
 
 const ProductListing = () => {
   const state = useApiResource(() => getProducts());
+
+  useEffect(() => {
+    document.title = 'The Catalog | Objects for the Thoughtful Creator';
+    const meta = document.querySelector('meta[name="description"]');
+    if (meta) {
+      meta.setAttribute(
+        'content',
+        'Explore a curated selection of archival-quality essentials designed to age with grace and serve with purpose.'
+      );
+    }
+  }, []);
+
   if (state.status === 'loading' || state.status === 'idle') {
     return <Loading />;
   }

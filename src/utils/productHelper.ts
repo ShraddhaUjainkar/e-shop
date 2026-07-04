@@ -51,3 +51,22 @@ export const getVariantStock = (
   if (val < 5) return 'low_stock';
   return 'available';
 };
+
+// Image optimization CDN helper
+export const optimizeImageUrl = (url: string, width: number): string => {
+  if (!url) return '';
+  if (url.includes('fakestoreapi.com')) {
+    // wsrv.nl is a free, fast, global image resizing CDN that converts to webp on the fly
+    return `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=${width}&output=webp`;
+  }
+  if (url.includes('unsplash.com')) {
+    // Unsplash supports dynamic sizing via URL parameters, replace w=... with our requested width
+    const baseUrl = url.split('?')[0];
+    const params = new URLSearchParams(url.split('?')[1] || '');
+    params.set('w', width.toString());
+    params.set('auto', 'format');
+    params.set('q', '80');
+    return `${baseUrl}?${params.toString()}`;
+  }
+  return url;
+};

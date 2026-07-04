@@ -12,20 +12,16 @@ $color-background: #fff8f3; // slightly warmer alt background (nav/footer)
 // Accent
 $color-forest: #2f4538; // primary-container — buttons, active states
 $color-forest-dark: #192f23; // primary — deep variant for text-on-light emphasis
-$color-brass: #b59410; // secondary — quick-add, price highlight, badges
+$color-brass: #705700; // secondary — quick-add, price highlight, badges (darkened from #b59410 for contrast)
+$color-rose: #9a4339; // sale / sold-out / remove-item (darkened from #c1665a for contrast)
 $color-brass-light: #fcca66; // secondary-container — hover fills, soft accents
-$color-rose: #c1665a; // sale / sold-out / remove-item (from your design brief; not in reference file)
-
-// Neutrals / surfaces
 $color-surface: #fff8f3;
 $color-surface-container: #f3ede8;
 $color-surface-container-low: #f9f2ed;
 $color-surface-container-high: #ede7e2;
 $color-card-white: #f7f5f0;
-
-// Borders / lines
 $color-line: #d9d5ca;
-$color-outline: #737973;
+$color-outline: #545a54; // (darkened from #737973 for contrast)
 $color-outline-variant: #c2c8c2;
 $color-text-muted: #424844; // on-surface-variant
 

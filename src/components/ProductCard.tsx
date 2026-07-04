@@ -24,6 +24,9 @@ const ProductCard = ({ product }: { product: Product }) => {
             className="transition-transform duration-700 group-hover:scale-105"
             src={product.thumbnail}
             alt={product.name}
+            width={300}
+            height={300}
+            loading="lazy"
           />
         </Link>
       </div>
